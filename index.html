@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Typing Speed Test</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="container">
+    <picture>
+      <source media="(min-width: 600px)" srcset="assets/images/logo-large.svg">
+
+      <img src="assets/images/logo-small.svg" alt="logo">
+    </picture>
+
+    <p class="best-score">
+      🏆best:
+      <span id="bestScore">0</span>
+      WPM
+    </p>
+  </header>
+
+
+  <nav class="container">
+
+    <div class="states">
+      <p>WPM: <span id="WPM">0</span></p>
+
+      <p>
+        Accuracy:
+        <span id="accuracy">0%</span>
+      </p>
+
+      <p>
+        Time:
+        <span id="time">1:00</span>
+      </p>
+    </div>
+
+
+    <div class="btns">
+
+      <div class="difficulty-btns">
+
+        <h5>Difficulty:</h5>
+
+        <button data-difficulty value="easy" type="button">
+          Easy
+        </button>
+
+        <button data-difficulty value="medium" type="button">
+          Medium
+        </button>
+
+        <button class="active" data-difficulty value="hard" type="button">
+          Hard
+        </button>
+
+
+        <select class="difficulty-select">
+
+          <option data-difficulty value="easy">
+            Easy
+          </option>
+
+          <option data-difficulty value="medium">
+            Medium
+          </option>
+
+          <option data-difficulty value="hard" selected>
+            Hard
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <div class="mode-btns">
+
+        <h5>Mode:</h5>
+
+        <button data-mode value="timed" type="button">
+          Timed(60s)
+        </button>
+
+        <button class="active" data-mode value="passage" type="button">
+          Passage
+        </button>
+
+
+        <select class="mode-select">
+
+          <option data-mode value="timed">
+            Timed(60s)
+          </option>
+
+          <option data-mode value="passage" selected>
+            Passage
+          </option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+
+  <main>
+
+    <!-- ================= TEST PAGE ================= -->
+
+    <section class="test-page">
+
+      <div class="test-area container">
+
+        <div class="passage"></div>
+
+        <textarea></textarea>
+
+      </div>
+
+
+      <div class="overlay">
+
+        <button id="startBtn" type="button">
+          Start Typing Test
+        </button>
+
+        <p>
+          Or click the test and start typing
+        </p>
+
+      </div>
+
+
+      <button id="restart" type="button">
+        Restart Test
+
+        <img src="assets/images/icon-restart.svg" alt="restart">
+
+      </button>
+
+    </section>
+
+
+    <!-- ================= RESULTS PAGE ================= -->
+
+    <section class="results">
+
+      <img class="results-icon" src="assets/images/icon-completed.svg" alt="">
+
+      <h1 class="results-title">
+        Baseline Established
+      </h1>
+
+      <p class="results-description">
+        You've set the bar.
+        Now the real challenge begins -
+        time to beat it.
+      </p>
+
+
+      <div class="final-results">
+
+        <p>
+          WPM:
+          <span id="finalWPM"></span>
+        </p>
+
+        <p>
+          Accuracy:
+          <span id="finalAccuracy"></span>
+        </p>
+
+        <p>
+          Characters:
+          <span id="characters"></span>
+        </p>
+
+      </div>
+
+
+      <button id="beat-this-score" type="button">
+        Beat This Score
+
+        <img src="assets/images/icon-restart.svg" alt="">
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <script type="module" src="index.js"></script>
+
+</body>
+
+</html>
