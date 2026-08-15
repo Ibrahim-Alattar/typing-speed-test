@@ -5,7 +5,6 @@ export function createErrorTracker(passage) {
 
   return {
     trackError(typedText) {
-      errorIndexSet = new Set();
 
       for (let i = 0; i < typedText.length; i++) {
         if (!isCharCorrect(passage, typedText, i)) {
